@@ -1,0 +1,262 @@
+:root{
+  --background-image: linear-gradient(120deg,#00b392cc,rgba(1, 84, 69, 0.67));
+  --background-overlay: rgba(0,0,0,0.4);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 2;
+}
+ul{
+  list-style-type: none;
+}
+img{
+  max-width: 100%;
+}
+body{
+  font-family: "Manrope , sans-serif";
+  overflow: auto;
+}
+a{
+  font-family: inherit;
+  text-decoration: none;
+  color: white;
+}
+
+/* Header */
+.header{
+  position: absolute;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  width: 200px;
+  transition: all 0.5s ease-in-out;
+  font-size: 25px;
+  
+}
+.header.open{
+  height: 100vh;
+  background-color: var(--background-overlay);
+  z-index: 123122;
+}
+.header nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header nav ul li{
+  margin: 25px 0;
+}
+
+.Menu__Hover:hover {
+  background-color: #00c5a1cc;
+  border-radius: 0 10px 0 10px;
+
+}
+
+/* Menu Button */
+.menu-btn button{
+  background-color: transparent;
+  font-size: 36px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-btn {
+  position: absolute;
+  right: 80px;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  z-index: 999;
+}
+
+/* Homepage */
+.homepage{
+  background: url("./showcase.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center ;
+  height: 100vh;
+  z-index: 2;
+}
+.homepage .overlay {
+  background-image: var(--background-image) ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+.homepage .overlay h1{
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 90px;
+}
+.typed{
+  font-size: 36px;
+}
+.homepage .overlay ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.homepage .overlay ul li{
+  margin:0 20px;
+}
+.homepage .overlay ul li a{
+  
+  font-size: 46px;
+}
+.twitter :hover{
+  color: #1DA1F2;
+}
+.github :hover{
+  color: black;
+}
+.linkedin :hover{
+  color: #2867B2;
+}
+
+/* Particles */
+.tsparticles-canvas-el{
+  position:absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  
+}
+/* Projects */
+.projects{
+  background-image: var(--background-image);
+}
+.projects h1{
+  padding: 50px 80px;
+  color: #fff ;
+  font-size: 40px;
+}
+.projects .cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 50px;
+  gap: 40px;
+  color: white;
+  font-family: "Manrope , sans-serif";
+  padding-bottom: 20px;
+}
+.projects .cards h4{
+  font-size: 24px;
+  margin: 20px 0 10px;
+  color: black;
+}
+.projects .cards p{
+  font-size: 21px;
+  margin-bottom: 30px;
+}
+.projects .cards ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects .cards ul li  a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.projects .cards ul li  a.github_{
+  background-color: rgb(42, 42, 42);
+  font-size: 15px;
+  padding: 5px;
+}
+.projects .cards ul li  a.Demo{
+  background-color: #17519c;
+  font-size: 15px;
+  padding: 5px;
+}
+
+
+
+/* Contacts */
+.contacts{
+  
+  background-image: var(--background-image);
+  height: 100vh;
+  z-index: -8871;
+}
+.contacts  h1 {
+  padding: 50px 80px;
+  color: white;
+  font-size: 40px;
+}
+.contacts ul{
+ display: flex;
+ justify-content: space-between;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+.contacts ul li{
+  margin: 10px;
+}
+.contacts ul li .mailicon{
+  font-size: 35px;
+}
+
+.contacts .mailname{
+  color : #fff;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+@media (max-width: 992px) {
+  .homepage .overlay h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 500px) {
+  .menu-btn{
+    right: 30px;
+  }
+  .homepage .overlay h1 {
+    font-size: 30px;
+  }
+  .typed{
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .homepage .overlay .twitter{
+    font-size: 25px;
+  }
+  .homepage .overlay .github{
+    font-size: 25px;
+  }
+  .homepage .overlay .linkedin{
+    font-size: 25px;
+  }
+  .contacts ul li a{
+    font-size: 18px;
+  }
+  .contacts h1, .projects h1{
+    padding: 50px;
+  }
+  .header{
+    font-size: 20px;  
+  }
+  .Whiplashers h1{
+    font-size: 20px;
+  }
+  /* .image1{
+    ma
+  } */
+}
